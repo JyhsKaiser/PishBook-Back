@@ -18,7 +18,7 @@ RUN mvn package -DskipTests
 # Se usa un JRE (más ligero) para ejecutar el JAR compilado
 # ------------------------------------
 # Usas una imagen JRE Alpine, lo cual ya estás haciendo:
-FROM docker.io/library/eclipse-temurin:17-jrk-alpine
+FROM docker.io/library/eclipse-temurin:17-jre-alpine
 # NOTA: Mejor usar la versión JRE si solo vas a ejecutar,
 # ej: FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
