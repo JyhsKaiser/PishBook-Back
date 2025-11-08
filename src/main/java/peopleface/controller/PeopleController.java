@@ -24,4 +24,10 @@ public class PeopleController {
     {
         return peopleService.guardarPeople(people);
     }
+
+    @DeleteMapping
+    public String deletePeople(@RequestBody People people)
+    {
+        return peopleService.eliminarTodos();
+    }
 }

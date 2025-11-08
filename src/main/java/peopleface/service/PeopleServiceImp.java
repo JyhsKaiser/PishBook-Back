@@ -13,16 +13,20 @@ public class PeopleServiceImp implements PeopleService {
     private PeopleRepository peopleRepository;
 
     @Override
-    public List<People> conseguirPeople()
-    {
+    public List<People> conseguirPeople() {
         List<People> listaPeople = peopleRepository.findAll();
         return listaPeople;
     }
 
     @Override
-    public People guardarPeople(People people)
-    {
+    public People guardarPeople(People people) {
         return peopleRepository.save(people);
+    }
+
+    @Override
+    public String eliminarTodos() {
+        peopleRepository.deleteAll();
+        return "Ok";
     }
 
 }
